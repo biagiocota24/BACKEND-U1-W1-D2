@@ -67,6 +67,28 @@ public class Metodi {
         }
     }
 
+    public static void calcola() {
+        System.out.println("primo valore");
+        int a = scanner.nextInt();
+        System.out.println("che operazione vuoi eseguire tra + , - , * , / , % ");
+        char operatore = scanner.next().charAt(0);
+        System.out.println("secondo valore");
+        int b = scanner.nextInt();
+        int risultato = 0;
+        switch (operatore) {
+            case '+' -> risultato = a + b;
+            case '-' -> risultato = a - b;
+            case '*' -> risultato = a * b;
+            case '/' -> risultato = a / b;
+            case '%' -> risultato = a % b;
+            default -> {
+                System.out.println("operazione non consentita");
+                break;
+            }
+        }
+        System.out.println("risultato : " + risultato);
+    }
+
 
 }
 
